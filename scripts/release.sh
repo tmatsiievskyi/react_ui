@@ -6,7 +6,7 @@ echo "New version: $new_version"
 
 $(pnpm run build)
 
-$(pnpm publish --access public)
+$(npm publish)
 
 git add .
 git commit -m "RELEASE (serif) : new release $new_version"
