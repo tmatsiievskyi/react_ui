@@ -1,8 +1,13 @@
 {
-  "name": "react_ui2",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@tmatsiievskyi/react_ui",
+  "private": false,
+  "version": "0.0.3",
   "type": "module",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc --p ./tsconfig-build.json && vite build",
@@ -12,9 +17,11 @@
     "test": "vitest",
     "test:run": "vitest --run",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepublishOnly": "pnpm run build",
+    "release": "sh ./scripts/release.sh"
   },
-  "dependencies": {
+  "peerDependencies": {
     "clsx": "^2.1.1",
     "cva": "npm:class-variance-authority@^0.7.0",
     "react": "^18.2.0",
