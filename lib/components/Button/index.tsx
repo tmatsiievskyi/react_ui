@@ -1,3 +1,1 @@
-export function Button(props: React.ButtonHTMLAttributes<HTMLButtonElement>) {
-  return <button {...props} />;
-}
+export { Button } from './Button.comp';
