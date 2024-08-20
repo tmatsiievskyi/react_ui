@@ -1,12 +1,10 @@
-import { Button } from '../lib/main';
 import './App.css';
 
 function App() {
   return (
-    <>
-      <Button label='asd' />
+    <div data-testid='app-wrapper'>
       <h1 className=' text-3xl font-bold underline'> Check</h1>
-    </>
+    </div>
   );
 }
 
