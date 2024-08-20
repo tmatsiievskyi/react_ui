@@ -1,27 +1,86 @@
-/* eslint-env node */
-
 module.exports = {
-  root: true,
-  env: { browser: true, es2020: true },
+  env: {
+    browser: true,
+    es2021: true,
+  },
   extends: [
+    'airbnb',
+    'airbnb-typescript',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:react-hooks/recommended',
+    'plugin:react/recommended',
+    'prettier',
+    'plugin:prettier/recommended',
+  ],
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: ['.eslintrc.{js,cjs}'],
+      parserOptions: {
+        sourceType: 'script',
+      },
+    },
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: true,
+    project: ['./tsconfig.json', './tsconfig.node.json'],
     tsconfigRootDir: __dirname,
   },
-  plugins: ['react-refresh'],
+  plugins: ['@typescript-eslint', 'react'],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
+    'react/react-in-jsx-scope': 'off',
+    'no-console': 'error',
+    'react/jsx-props-no-spreading': 'off',
+    'max-len': [
+      'error',
+      {
+        code: 150,
+      },
     ],
-    '@typescript-eslint/no-non-null-assertion': 'off',
+    'padding-line-between-statements': [
+      // ? https://eslint.org/docs/latest/rules/padding-line-between-statements
+      'error',
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: 'return',
+      },
+      {
+        blankLine: 'always',
+        prev: ['const', 'let', 'function'],
+        next: '*',
+      },
+      {
+        blankLine: 'always',
+        prev: ['*'],
+        next: ['if', 'switch', 'while', 'try', 'function'],
+      },
+      {
+        blankLine: 'always',
+        prev: ['if', 'switch', 'while', 'try', 'function'],
+        next: ['*'],
+      },
+      {
+        blankLine: 'always',
+        prev: ['export'],
+        next: ['*'],
+      },
+    ],
+    'import/prefer-default-export': 'off',
+    'react/jsx-sort-props': [
+      // ? https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
+      'error',
+      {
+        shorthandFirst: true,
+      },
+    ],
+    'react/require-default-props': ['off'],
+    'no-else-return': 'error',
+    '@typescript-eslint/lines-between-class-members': ['off'],
+    '@typescript-eslint/no-throw-literal': ['off'],
   },
-}
+};
