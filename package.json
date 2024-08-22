@@ -47,6 +47,7 @@
     "@typescript-eslint/eslint-plugin": "^8.2.0",
     "@typescript-eslint/parser": "^8.2.0",
     "@vitejs/plugin-react": "^4.0.1",
+    "@vitest/coverage-v8": "^2.0.5",
     "autoprefixer": "^10.4.20",
     "eslint": "8.45",
     "eslint-config-airbnb": "^19.0.4",
@@ -67,5 +68,8 @@
     "vite": "^4.4.0",
     "vite-plugin-dts": "3.7.3",
     "vitest": "0.33"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0"
   }
 }
