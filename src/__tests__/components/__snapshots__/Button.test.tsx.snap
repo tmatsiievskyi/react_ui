@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button > renders correcty with buttonType prop 1`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 disabled:cursor-not-allowed items-center justify-center select-none bg-primary text-primary-foreground hover:bg-primary/90 transition-all disabled:pointer-events-none disabled:opacity-70 disabled:shadow-none text-base py-2 px-4 rounded-md"
+  />
+</div>
+`;
+
+exports[`Button > renders correcty with buttonType prop 2`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 disabled:cursor-not-allowed items-center justify-center select-none bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 hover:shadow-md transition-all text-base py-2 px-4 rounded-md"
+  />
+</div>
+`;
+
+exports[`Button > renders correcty with buttonType prop 3`] = `
+<div>
+  <button
+    class="flex flex-row gap-x-4 disabled:cursor-not-allowed items-center justify-center select-none bg-background text-primary/90 hover:bg-accent/70 border border-primary/50 hover:text-accent-foreground text-base py-2 px-4 rounded-md"
+  />
+</div>
+`;

@@ -5,16 +5,13 @@ export const buttonStyles = cva(
   {
     variants: {
       buttonType: {
-        primary:
-          'bg-violet-500 text-white border-violet-500 hover:bg-violet-600',
+        primary: `select-none bg-primary text-primary-foreground hover:bg-primary/90 transition-all 
+          disabled:pointer-events-none disabled:opacity-70 disabled:shadow-none`,
         secondary:
-          'bg-gray-200 text-gray-600 border-gray-200 hover:bg-gray-300',
-        warning:
-          'bg-yellow-500 text-white border-yellow-500 hover:bg-yellow-600',
+          'select-none bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 hover:shadow-md transition-all',
         outline:
-          'bg-white text-gray-600 hover:bg-gray-100 border hover:border-gray-100 border-gray-300 hover:shadow-md',
-        disabled: 'bg-black text-white border-black cursor-not-allowed',
-        error: 'bg-red-500 text-white border-red-500 hover:bg-red-600',
+          'select-none bg-background text-primary/90 hover:bg-accent/70 border border-primary/50 hover:text-accent-foreground',
+        link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {
         default: ['text-base'],
@@ -52,5 +49,5 @@ export const buttonStyles = cva(
       rounded: 'default',
       spacing: 'default',
     },
-  }
+  },
 );
