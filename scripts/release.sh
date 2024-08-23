@@ -10,6 +10,6 @@ $(npm publish)
 
 git add .
 git commit -m "RELEASE (serif) : new release $new_version"
-git push origin depl
+git push origin master
 
 echo "Released $new_version"
