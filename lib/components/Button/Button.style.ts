@@ -6,7 +6,7 @@ export const buttonStyles = cva(
     variants: {
       buttonType: {
         primary: `select-none bg-primary text-primary-foreground hover:bg-primary/90 transition-all 
-          disabled:pointer-events-none disabled:opacity-70 disabled:shadow-none`,
+          disabled:pointer-events-none disabled:opacity-70 disabled:shadow-none disabled:cursor-not-allowed`,
         secondary:
           'select-none bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 hover:shadow-md transition-all',
         outline:
