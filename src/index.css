@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  .without-ring {
+    @apply focus:ring-0 focus:ring-offset-0;
+  }
   :root {
     --background: 255 255 255;
     --foreground: 2 8 23;
@@ -64,4 +67,9 @@
     --input: 30 41 59;
     --ring: 203 213 225;
   }
+}
+
+input::-webkit-input-placeholder {
+  position: relative;
+  top: -1px;
 }

@@ -3,7 +3,7 @@
 exports[`Button > renders correcty with buttonType prop 1`] = `
 <div>
   <button
-    class="flex flex-row gap-x-4 disabled:cursor-not-allowed items-center justify-center select-none bg-primary text-primary-foreground hover:bg-primary/90 transition-all disabled:pointer-events-none disabled:opacity-70 disabled:shadow-none text-base py-2 px-4 rounded-md"
+    class="flex flex-row gap-x-4 items-center justify-center select-none bg-primary text-primary-foreground hover:bg-primary/90 transition-all disabled:pointer-events-none disabled:opacity-70 disabled:shadow-none disabled:cursor-not-allowed text-base py-2 px-4 rounded-md"
   />
 </div>
 `;
