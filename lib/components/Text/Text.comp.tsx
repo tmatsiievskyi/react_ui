@@ -1,4 +1,4 @@
-import React, { type PropsWithChildren } from 'react';
+import { type PropsWithChildren } from 'react';
 import { textStyles } from './Text.style';
 
 type TTextSize = 'xs' | 'sm' | 'base' | 'lg' | 'xl';
