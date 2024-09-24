@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --p ./tsconfig-build.json && vite build",
+    "build-tailwind": "NODE_ENV=production npx tailwindcss -i ./src/index.css -o ./dist/globals.css --postcss --minify",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky install",
