@@ -6,6 +6,8 @@ echo "New version: $new_version"
 
 $(pnpm run build)
 
+$(pnpm run build-tailwind)
+
 $(npm publish)
 
 git add .
