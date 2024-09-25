@@ -2,7 +2,7 @@ import { cva } from 'cva';
 
 export const inputStyles = cva('', {
   variants: {
-    type: {
+    compType: {
       anim: {},
       default: {},
     },
