@@ -24,7 +24,7 @@ export const Default: Story = {
 
 export const Anim: Story = {
   args: {
-    type: 'anim',
+    compType: 'anim',
     inputType: 'anim',
     labelType: 'anim',
     wrapperType: 'anim',

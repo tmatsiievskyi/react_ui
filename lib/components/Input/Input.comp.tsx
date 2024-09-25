@@ -27,7 +27,8 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
       wrapperClassName,
       fieldSetClassName,
       fieldSetForValueClassName,
-      type = 'default',
+      type,
+      compType = 'default',
       onChange,
       ...props
     },
@@ -41,16 +42,22 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
       spacing: null,
     };
 
-    return type === 'anim' ? (
+    return compType === 'anim' ? (
       <div
         className={cm(
-          inputStyles({ ...defaultOptions, wrapperType: wrapperType || type }),
+          inputStyles({
+            ...defaultOptions,
+            wrapperType: wrapperType || compType,
+          }),
           wrapperClassName,
         )}
       >
         <input
           className={cm(
-            inputStyles({ ...defaultOptions, inputType: inputType || type }),
+            inputStyles({
+              ...defaultOptions,
+              inputType: inputType || compType,
+            }),
             inputClassName,
           )}
           id={id}
@@ -62,7 +69,10 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
         {label && (
           <label
             className={cm(
-              inputStyles({ ...defaultOptions, labelType: labelType || type }),
+              inputStyles({
+                ...defaultOptions,
+                labelType: labelType || compType,
+              }),
               labelClassName,
             )}
             htmlFor={id}
@@ -109,14 +119,20 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
     ) : (
       <div
         className={cm(
-          inputStyles({ ...defaultOptions, wrapperType: wrapperType || type }),
+          inputStyles({
+            ...defaultOptions,
+            wrapperType: wrapperType || compType,
+          }),
           wrapperClassName,
         )}
       >
         {label && (
           <label
             className={cm(
-              inputStyles({ ...defaultOptions, labelType: labelType || type }),
+              inputStyles({
+                ...defaultOptions,
+                labelType: labelType || compType,
+              }),
               labelClassName,
             )}
             htmlFor={id}
@@ -127,7 +143,7 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
         <input
           className={cm(
             inputStyles({
-              inputType: inputType || type,
+              inputType: inputType || compType,
               labelType: null,
               wrapperType: null,
             }),
