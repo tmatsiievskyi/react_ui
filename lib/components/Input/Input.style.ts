@@ -2,6 +2,10 @@ import { cva } from 'cva';
 
 export const inputStyles = cva('', {
   variants: {
+    type: {
+      anim: {},
+      default: {},
+    },
     inputType: {
       default: `flex w-full rounded-md border font-light border-input bg-transparent
        text-primary shadow-sm transition-colors 
@@ -34,6 +38,7 @@ export const inputStyles = cva('', {
     },
     wrapperType: {
       default: 'relative w-full min-w-[200px]',
+      anim: 'relative max-w-[fit-content] group',
     },
     labelType: {
       default: `py-0 px-0 text-gray-600 text-sm`,

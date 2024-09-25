@@ -24,10 +24,15 @@ export const Default: Story = {
 
 export const Anim: Story = {
   args: {
+    type: 'anim',
     inputType: 'anim',
     labelType: 'anim',
+    wrapperType: 'anim',
+    wrapperClassName: 'w-full',
     label: 'Login',
     placeholder: ' ',
     fieldSetClassName: 'group-focus-within:border-1',
   },
 };
+
+export const InputOne: Story = {};
