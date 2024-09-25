@@ -20,7 +20,7 @@ export default defineConfig({
       formats: ['es'],
     },
     cssCodeSplit: false,
-    copyPublicDir: false,
+    copyPublicDir: true,
     rollupOptions: {
       external: ['react', 'react/jsx-runtime'],
       output: {
