@@ -8,6 +8,8 @@ $(npm run build)
 
 $(npm run build-tailwind)
 
+sleep 10
+
 $(npm publish)
 
 git add .
