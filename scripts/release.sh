@@ -4,11 +4,11 @@ echo "Current version: $current_version"
 new_version=$(pnpm version --no-git-tag-version patch)
 echo "New version: $new_version"
 
-$(npm run build)
+# $(npm run build)
 
-$(npm run build-tailwind)
+# $(npm run build-tailwind)
 
-sleep 10
+# sleep 10
 
 $(npm publish)
 
