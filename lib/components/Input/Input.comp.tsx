@@ -4,6 +4,8 @@ import { cm } from '../../utils';
 import { inputStyles } from './Input.style';
 
 export type TInputProps = {
+  error?: boolean;
+  valid?: boolean;
   label?: string;
   labelClassName?: string;
   wrapperClassName?: string;
@@ -18,6 +20,9 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
     {
       id,
       inputType,
+      disabled,
+      error,
+      valid,
       label,
       wrapperType,
       labelType,
@@ -59,6 +64,8 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
               inputType: inputType || compType,
             }),
             inputClassName,
+            disabled &&
+              inputStyles({ ...defaultOptions, inputState: 'disabledAnim' }),
           )}
           id={id}
           onChange={onChange}
@@ -89,6 +96,12 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
               inputType: null,
               spacing: null,
             }),
+            error &&
+              inputStyles({ ...defaultOptions, inputState: 'errorAnim' }),
+
+            valid &&
+              inputStyles({ ...defaultOptions, inputState: 'validAnim' }),
+
             fieldSetClassName,
           )}
         >
@@ -108,6 +121,12 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
               inputType: null,
               spacing: null,
             }),
+            error &&
+              inputStyles({ ...defaultOptions, inputState: 'errorAnim' }),
+
+            valid &&
+              inputStyles({ ...defaultOptions, inputState: 'validAnim' }),
+
             fieldSetForValueClassName,
           )}
         >
@@ -132,6 +151,7 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
               inputStyles({
                 ...defaultOptions,
                 labelType: labelType || compType,
+                inputState: error ? 'error' : null,
               }),
               labelClassName,
             )}
@@ -147,6 +167,9 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
               labelType: null,
               wrapperType: null,
             }),
+            error && inputStyles({ inputState: 'error' }),
+            disabled && inputStyles({ inputState: 'disabled' }),
+            valid && inputStyles({ ...defaultOptions, inputState: 'valid' }),
             inputClassName,
           )}
           id={id}

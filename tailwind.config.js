@@ -30,6 +30,13 @@ export default {
           DEFAULT: 'rgb(var(--dark) / <alpha-value>)',
           foreground: 'rgb(var(--dark-foreground) / <alpha-value>)',
         },
+        destructive: {
+          DEFAULT: 'rgb(var(--destructive) / <alpha-value>)',
+          foreground: 'rgb(var(--destructive-foreground) / <alpha-value>)',
+        },
+        success: {
+          DEFAULT: 'rgb(var(--success) / <alpha-value>)',
+        },
       },
     },
   },
