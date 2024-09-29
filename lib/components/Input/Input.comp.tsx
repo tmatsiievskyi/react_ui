@@ -163,9 +163,8 @@ const Input = forwardRef<HTMLInputElement, TInputProps>(
         <input
           className={cm(
             inputStyles({
+              ...defaultOptions,
               inputType: inputType || compType,
-              labelType: null,
-              wrapperType: null,
             }),
             error && inputStyles({ inputState: 'error' }),
             disabled && inputStyles({ inputState: 'disabled' }),
