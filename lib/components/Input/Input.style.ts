@@ -7,7 +7,7 @@ export const inputStyles = cva('', {
       default: {},
     },
     inputType: {
-      default: `flex w-full rounded-md border font-light border-input bg-transparent
+      default: `w-full rounded-md border font-light border-input bg-transparent
        text-primary shadow-sm transition-colors 
       file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground placeholder-gray-300 placeholder:text-sm
       focus-visible:outline-none  without-ring 
