@@ -19,6 +19,43 @@ export const Default: Story = {
     labelType: 'default',
     label: 'Default',
     className: '',
+    value: 'asd',
+  },
+};
+
+export const DefaultValid: Story = {
+  args: {
+    inputType: 'default',
+    wrapperType: 'default',
+    placeholder: 'Default',
+    labelType: 'default',
+    label: 'Default',
+    className: '',
+    valid: true,
+  },
+};
+
+export const DefaultDisabled: Story = {
+  args: {
+    inputType: 'default',
+    wrapperType: 'default',
+    placeholder: 'Default',
+    labelType: 'default',
+    label: 'Default',
+    className: '',
+    disabled: true,
+  },
+};
+
+export const DefaultError: Story = {
+  args: {
+    inputType: 'default',
+    wrapperType: 'default',
+    placeholder: 'Default',
+    labelType: 'default',
+    label: 'Default',
+    className: '',
+    error: true,
   },
 };
 
@@ -31,7 +68,45 @@ export const Anim: Story = {
     wrapperClassName: 'w-full',
     label: 'Login',
     placeholder: ' ',
-    fieldSetClassName: 'group-focus-within:border-1',
+  },
+};
+
+export const AnimDisabled: Story = {
+  args: {
+    compType: 'anim',
+    inputType: 'anim',
+    labelType: 'anim',
+    wrapperType: 'anim',
+    wrapperClassName: 'w-full',
+    label: 'Login',
+    placeholder: ' ',
+    disabled: true,
+  },
+};
+
+export const AnimError: Story = {
+  args: {
+    compType: 'anim',
+    inputType: 'anim',
+    labelType: 'anim',
+    wrapperType: 'anim',
+    wrapperClassName: 'w-full',
+    label: 'Login',
+    placeholder: ' ',
+    error: true,
+  },
+};
+
+export const AnimValid: Story = {
+  args: {
+    compType: 'anim',
+    inputType: 'anim',
+    labelType: 'anim',
+    wrapperType: 'anim',
+    wrapperClassName: 'w-full',
+    label: 'Login',
+    placeholder: ' ',
+    valid: true,
   },
 };
 

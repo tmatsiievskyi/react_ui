@@ -15,6 +15,19 @@ export const inputStyles = cva('', {
       disabled:cursor-not-allowed disabled:opacity-50`,
       anim: 'outline-none px-3 py-3 peer relative border-none shadow-none focus:shadow-sm text-primary/80',
     },
+
+    inputState: {
+      normal: '',
+      error: `transition-colors focus:outline-none focus:ring-2 focus:ring-opacity-50 border-destructive 
+        hover:border-destructive focus:border-destructive focus:ring-destructive`,
+      errorAnim: 'border-destructive group-focus-within:!border-destructive',
+      valid: 'border-success focus:border-success',
+      validAnim:
+        'border-success focus:border-success group-focus-within:!border-success',
+      disabled:
+        'pointer-events-none cursor-not-allowed bg-gray-100  shadow-inner text-gray-400 focus:border-input',
+      disabledAnim: 'pointer-events-none cursor-not-allowed bg-gray-100',
+    },
     size: {
       default: ['text-base'],
       sm: ['text-small'],
