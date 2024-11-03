@@ -61,9 +61,9 @@ export const inputStyles = cva('', {
     group-focus-within:!text-primary/50`,
     },
     fieldSet: {
-      default: `inset-0 absolute border border-input rounded pointer-events-none mt-[-9px] invisible peer-placeholder-shown:visible 
+      default: `inset-0 absolute border border-input rounded pointer-events-none mt-[-10px] invisible peer-placeholder-shown:visible 
   group-focus-within:!border-primary/30 group-focus-within:border-1`,
-      forValue: `inset-0 absolute border border-input rounded pointer-events-none mt-[-9px] visible peer-placeholder-shown:invisible 
+      forValue: `inset-0 absolute border border-input rounded pointer-events-none mt-[-10px] visible peer-placeholder-shown:invisible 
   group-focus-within:border-input group-focus-within:!border-primary/30`,
     },
   },
