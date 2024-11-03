@@ -15,11 +15,11 @@ describe('Button', () => {
 
   it('renders correcty with buttonType prop', () => {
     const { container: containerPrimary } = render(
-      <Button buttonType='primary' />,
+      <Button buttonType='base' color='primary' />,
     );
 
     const { container: containerSecondary } = render(
-      <Button buttonType='secondary' />,
+      <Button buttonType='base' color='secondary' />,
     );
 
     const { container: containerOutline } = render(
@@ -41,8 +41,9 @@ describe('Button', () => {
     );
 
     expect(containerPrimary.firstChild).toHaveClass(
-      `select-none bg-primary text-primary-foreground hover:bg-primary/90 transition-all 
-          disabled:pointer-events-none disabled:opacity-70 disabled:shadow-none`,
+      `select-none transition-all 
+          disabled:pointer-events-none disabled:opacity-70 disabled:shadow-none disabled:cursor-not-allowed 
+          bg-primary text-bkg-frg hover:bg-primary/90`,
     );
   });
 

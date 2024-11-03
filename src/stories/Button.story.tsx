@@ -17,17 +17,32 @@ export const Primary: Story = {
     onClick: () => {
       window.console.log('Button clicked');
     },
+    buttonType: 'base',
+    className: 'bg-primary',
+    color: 'primary',
     label: 'Primary',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    buttonType: 'secondary',
+    buttonType: 'base',
+    color: 'secondary',
     onClick: () => {
       window.console.log('Button clicked');
     },
     label: 'Secondary',
+  },
+};
+
+export const Dark: Story = {
+  args: {
+    onClick: () => {
+      window.console.log('Button clicked');
+    },
+    buttonType: 'base',
+    color: 'dark',
+    label: 'Primary',
   },
 };
 
@@ -43,7 +58,7 @@ export const Outline: Story = {
 
 export const WithIcon: Story = {
   args: {
-    buttonType: 'primary',
+    buttonType: 'base',
     leftIcon: <span>👈</span>,
     label: 'With Icon',
   },

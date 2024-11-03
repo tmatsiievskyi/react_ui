@@ -13,7 +13,7 @@ export const inputStyles = cva('', {
       focus-visible:outline-none  without-ring 
       focus:border-primary/40  focus:shadow-md
       disabled:cursor-not-allowed disabled:opacity-50`,
-      anim: 'outline-none px-3 py-3 peer relative border-none shadow-none focus:shadow-sm text-primary/80',
+      anim: 'outline-none px-3 py-3 peer relative border-none shadow-none focus:shadow-sm text-primary/',
     },
 
     inputState: {

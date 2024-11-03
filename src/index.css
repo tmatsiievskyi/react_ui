@@ -7,29 +7,29 @@
     @apply focus:ring-0 focus:ring-offset-0;
   }
   :root {
-    --background: 255 255 255;
-    --foreground: 2 8 23;
+    --primary: 21deg 95.7% 27.1%;
+    --primary-frg: 12deg 12.2% 16.1%;
 
-    --primary: 15 23 42;
-    --primary-foreground: 248 250 252;
+    --secondary: 86deg 81.6% 38.4%;
+    --secondary-frg: 0deg 0% 96.1%;
 
-    --light: 255 255 255;
-    --light-foreground: 0 0 0;
+    --light: 220deg 2.6% 92.2%;
+    --light-frg: 222deg 64.3% 16.5%;
 
-    --dark: 0 0 0;
-    --dark-foreground: 255 255 255;
+    --dark: 222deg 64.3% 16.5%;
+    --dark-frg: 220deg 2.6% 92.2%;
 
-    --secondary: 241 245 249;
-    --secondary-foreground: 15 23 42;
+    --destructive: 0deg 82.7% 86.3%;
+    --destructive-frg: 220deg 2.6% 92.2%;
 
-    --destructive: 239 68 68;
-    --destructive-foreground: 248 250 252;
+    --success: 142deg 82.7% 77.3%;
+    --success-frg: 220deg 2.6% 92.2%;
 
-    --success: 16 185 129;
+    --bkg: 0deg 0% 99.2%;
+    --bkg-frg: 0deg 0% 15.7%;
 
-    --border: 226 232 240;
-    --input: 226 232 240;
-    --ring: 2 8 23;
+    --bkg-sec: 210deg 0.8% 98.4%;
+    --bkg-sec-frg: 0deg 0% 8.2%;
 
     --radius: 0.5rem;
   }
