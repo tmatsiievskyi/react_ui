@@ -18,6 +18,7 @@ const Button = forwardRef<HTMLButtonElement, TButtonProps>(
   (
     {
       className,
+      color,
       buttonType,
       size,
       rounded,
@@ -35,7 +36,7 @@ const Button = forwardRef<HTMLButtonElement, TButtonProps>(
     return (
       <Comp
         className={cm(
-          buttonStyles({ buttonType, size, rounded, spacing }),
+          buttonStyles({ buttonType, color, size, rounded, spacing }),
           className,
         )}
         ref={ref}

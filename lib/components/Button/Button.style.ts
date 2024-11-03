@@ -5,13 +5,21 @@ export const buttonStyles = cva(
   {
     variants: {
       buttonType: {
-        primary: `select-none bg-primary text-primary-foreground hover:bg-primary/90 transition-all 
+        base: `select-none transition-all 
           disabled:pointer-events-none disabled:opacity-70 disabled:shadow-none disabled:cursor-not-allowed`,
-        secondary:
-          'select-none bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80 hover:shadow-md transition-all',
         outline:
-          'select-none bg-background text-primary/90 hover:bg-accent/70 border border-primary/50 hover:text-accent-foreground',
+          'select-none border transition-all disabled:pointer-events-none disabled:opacity-70 disabled:shadow-none disabled:cursor-not-allowed',
         link: 'text-primary underline-offset-4 hover:underline',
+      },
+      color: {
+        primary: `bg-primary text-bkg-frg hover:bg-primary/90`,
+        secondary: `bg-secondary text-secondary-frg hover:bg-secondary/90`,
+        light: `bg-light text-light-frg hover:bg-light/90`,
+        dark: `bg-dark text-dark-frg hover:bg-dark/90`,
+        destructive: `bg-destructive text-destructive-frg hover:bg-destructive/90`,
+        success: `bg-success text-success-frg hover:bg-success/90`,
+        bkg: `bg-bkg text-bkg-frg hover:bg-bkg/90`,
+        'bkg-sec': `bg-bkg-sec text-bkg-sec-frg hover:bg-bkg-sec/90`,
       },
       size: {
         default: ['text-base'],
@@ -37,14 +45,14 @@ export const buttonStyles = cva(
     },
     compoundVariants: [
       {
-        buttonType: 'primary',
+        buttonType: 'base',
         size: 'default',
         spacing: 'default',
         rounded: 'default',
       },
     ],
     defaultVariants: {
-      buttonType: 'primary',
+      buttonType: 'base',
       size: 'default',
       rounded: 'default',
       spacing: 'default',
